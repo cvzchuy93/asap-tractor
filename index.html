@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASAP Tractor LLC — Dirt Work & Bobcat Services in Houston, TX</title>
+<meta name="description" content="ASAP Tractor LLC offers reliable dirt work, grading, land clearing, and Bobcat services across Houston and surrounding areas. Call for a fast quote." />
+<style>
+  :root {
+    --orange: #f57c00;
+    --orange-dark: #c25e00;
+    --dirt: #5d4037;
+    --bg: #fafafa;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  a { color: var(--orange-dark); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  header {
+    background: #fff;
+    border-bottom: 3px solid var(--orange);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  }
+  .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--dirt);
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--orange); }
+  .nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    color: var(--text);
+    font-weight: 500;
+    font-size: .95rem;
+  }
+  .nav-cta {
+    background: var(--orange);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .nav-cta:hover { background: var(--orange-dark); text-decoration: none; }
+
+  /* Hero */
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(93,64,55,.78), rgba(245,124,0,.55)),
+      url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80") center/cover no-repeat;
+    color: #fff;
+    padding: 110px 24px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 6px rgba(0,0,0,.3);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 28px;
+    opacity: .95;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border: 2px solid var(--orange);
+    transition: all .2s;
+  }
+  .btn:hover { background: #fff; color: var(--orange-dark); text-decoration: none; }
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    margin-left: 10px;
+  }
+  .btn-outline:hover { background: #fff; color: var(--dirt); }
+
+  /* Sections */
+  section {
+    padding: 70px 24px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2rem;
+    color: var(--dirt);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 44px;
+    font-size: 1.05rem;
+  }
+
+  /* Services grid */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px 24px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  }
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--orange);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+  }
+  .service-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: #eee;
+  }
+
+  /* Gallery */
+  .gallery { background: #fff; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform .3s;
+    background: #eee;
+  }
+  .gallery-grid img:hover {
+    transform: scale(1.02);
+  }
+  .service-card h3 {
+    color: var(--dirt);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+  }
+  .service-card p {
+    color: var(--muted);
+    font-size: .95rem;
+  }
+
+  /* Why us */
+  .why { background: #fff; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .why-item { text-align: center; }
+  .why-item .num {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--orange);
+    display: block;
+  }
+  .why-item h4 {
+    margin: 6px 0 4px;
+    color: var(--dirt);
+  }
+  .why-item p {
+    color: var(--muted);
+    font-size: .92rem;
+  }
+
+  /* Service area */
+  .area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .area-pill {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: .9rem;
+    color: var(--text);
+  }
+
+  /* Contact */
+  .contact {
+    background: var(--dirt);
+    color: #fff;
+  }
+  .contact h2 { color: #fff; }
+  .contact .section-sub { color: rgba(255,255,255,.8); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  @media (max-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  .contact-info p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+  }
+  .contact-info strong { color: var(--orange); display: block; font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; }
+  .contact-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 26px;
+    color: var(--text);
+  }
+  .form-row {
+    margin-bottom: 14px;
+  }
+  .form-row label {
+    display: block;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--dirt);
+  }
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: .95rem;
+    font-family: inherit;
+  }
+  .form-row textarea { resize: vertical; min-height: 90px; }
+  .contact-form button {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  .contact-form button:hover { background: var(--orange-dark); }
+
+  /* Footer */
+  footer {
+    background: #1a120e;
+    color: rgba(255,255,255,.7);
+    text-align: center;
+    padding: 24px;
+    font-size: .9rem;
+  }
+  footer span { color: var(--orange); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">ASAP <span>TRACTOR</span> LLC</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Houston's Go-To Crew for Dirt Work & Bobcat Services</h1>
+  <p>Fast, reliable land clearing, grading, and excavation across the greater Houston area. When you need it done right — and done now — call ASAP Tractor.</p>
+  <a href="#contact" class="btn">Get a Free Quote</a>
+  <a href="tel:+18325550199" class="btn btn-outline">Call (832) 555-0199</a>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>What We Do</h2>
+    <p class="section-sub">Bobcat-powered dirt work for residential, commercial, and acreage jobs.</p>
+    <div class="services">
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&q=80" alt="Land clearing with bobcat" loading="lazy" />
+        <h3>Land Clearing</h3>
+        <p>Brush removal, tree clearing, and lot cleanup to get your property ready for whatever's next.</p>
+      </div>
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=600&q=80" alt="Grading and leveling dirt" loading="lazy" />
+        <h3>Grading & Leveling</h3>
+        <p>Precision grading for building pads, driveways, yards, and drainage correction.</p>
+      </div>
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1597844808175-32ba8d2937eb?w=600&q=80" alt="Dirt and gravel hauling" loading="lazy" />
+        <h3>Dirt & Gravel Hauling</h3>
+        <p>Fill dirt, topsoil, gravel, and base material delivered and spread on-site.</p>
+      </div>
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Site preparation for construction" loading="lazy" />
+        <h3>Site Prep</h3>
+        <p>Full site preparation for new construction, sheds, barndos, and shop builds.</p>
+      </div>
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?w=600&q=80" alt="Driveway and pad construction" loading="lazy" />
+        <h3>Driveways & Pads</h3>
+        <p>Custom driveways, culvert installs, and compacted pads built to hold up to Texas weather.</p>
+      </div>
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Drainage and trenching work" loading="lazy" />
+        <h3>Drainage Solutions</h3>
+        <p>French drains, swales, and regrading to keep water off your foundation and out of your yard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="container">
+    <h2>Why ASAP Tractor?</h2>
+    <p class="section-sub">We show up, we work hard, we get it done.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="num">24h</span>
+        <h4>Fast Quotes</h4>
+        <p>Most estimates back within a day — often same-day.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">100%</span>
+        <h4>Licensed & Insured</h4>
+        <p>Full coverage so you and your property are protected.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">7+</span>
+        <h4>Years Experience</h4>
+        <p>Houston dirt, Houston weather, Houston job sites — we know it.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">★★★★★</span>
+        <h4>Locally Trusted</h4>
+        <p>Built on referrals from homeowners, builders, and contractors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <h2>Recent Work</h2>
+    <p class="section-sub">A look at jobs across the Houston area.</p>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Bobcat skid steer working" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=800&q=80" alt="Excavation job site" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?w=800&q=80" alt="Dirt grading work" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Construction site prep" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Heavy equipment dirt work" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80" alt="Land clearing project" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="container">
+    <h2>Where We Work</h2>
+    <p class="section-sub">Based in Houston, serving the greater metro and surrounding counties.</p>
+    <div class="area-list">
+      <span class="area-pill">Houston</span>
+      <span class="area-pill">Katy</span>
+      <span class="area-pill">Cypress</span>
+      <span class="area-pill">Spring</span>
+      <span class="area-pill">Tomball</span>
+      <span class="area-pill">Magnolia</span>
+      <span class="area-pill">Conroe</span>
+      <span class="area-pill">The Woodlands</span>
+      <span class="area-pill">Humble</span>
+      <span class="area-pill">Kingwood</span>
+      <span class="area-pill">Sugar Land</span>
+      <span class="area-pill">Richmond</span>
+      <span class="area-pill">Pearland</span>
+      <span class="area-pill">Friendswood</span>
+      <span class="area-pill">Hockley</span>
+      <span class="area-pill">Waller</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Get Your Free Quote</h2>
+    <p class="section-sub">Tell us about your project — we'll get back to you fast.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Phone</strong><a href="tel:+18325550199" style="color:#fff;">(832) 555-0199</a></p>
+        <p><strong>Email</strong><a href="mailto:info@asaptractorllc.com" style="color:#fff;">info@asaptractorllc.com</a></p>
+        <p><strong>Service Area</strong>Houston, TX & surrounding counties</p>
+        <p><strong>Hours</strong>Mon–Sat: 7am – 7pm<br>Sun: By appointment</p>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We\\'ll be in touch shortly.'); this.reset();">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="form-row">
+          <label for="project">Project Details</label>
+          <textarea id="project" placeholder="What kind of work do you need? Where's the site?" required></textarea>
+        </div>
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 <span>ASAP Tractor LLC</span> · Houston, TX · Licensed & Insured
+</footer>
+
+</body>
+</html>
