@@ -207,6 +207,80 @@
   }
 
   /* Why us */
+  /* Scale + Trust band */
+  .scale {
+    background: var(--dirt);
+    color: #fff;
+    padding: 70px 24px;
+    text-align: center;
+  }
+  .scale h2 { color: #fff; }
+  .scale .stat-num {
+    font-size: clamp(3.5rem, 9vw, 6rem);
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    margin: 18px 0 8px;
+    letter-spacing: -2px;
+  }
+  .scale .stat-label {
+    font-size: 1.1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .scale .stat-sub {
+    color: rgba(255,255,255,.75);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+  }
+  .trusted-eyebrow {
+    color: var(--orange);
+    font-size: .8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .trusted-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .trusted-card {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px;
+    padding: 22px 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s;
+    display: block;
+  }
+  .trusted-card:hover {
+    background: rgba(242,107,31,.1);
+    border-color: var(--orange);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .trusted-card .name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .trusted-card .domain {
+    font-size: .78rem;
+    color: rgba(255,255,255,.6);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   .why { background: #fff; }
   .why-grid {
     display: grid;
@@ -406,6 +480,31 @@
         <h4>Locally Trusted</h4>
         <p>Built on referrals from homeowners, builders, and contractors.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="scale">
+  <div class="container">
+    <div class="stat-label">By the Numbers</div>
+    <div class="stat-num">~70</div>
+    <div class="stat-label" style="font-size:.95rem;letter-spacing:3px;">Houses Delivered Per Week</div>
+    <p class="stat-sub">Across our crews and customer base — that's the scale of dirt work, grading, and site prep ASAP Tractor moves week in and week out.</p>
+
+    <div class="trusted-eyebrow">Trusted By</div>
+    <div class="trusted-grid">
+      <a class="trusted-card" href="https://www.vortexconcrete.com/" target="_blank" rel="noopener">
+        <div class="name">Vortex Concrete</div>
+        <div class="domain">vortexconcrete.com</div>
+      </a>
+      <a class="trusted-card" href="https://www.apex-foundation.com/" target="_blank" rel="noopener">
+        <div class="name">Apex Foundation</div>
+        <div class="domain">apex-foundation.com</div>
+      </a>
+      <a class="trusted-card" href="http://corporateconcrete.com/" target="_blank" rel="noopener">
+        <div class="name">Corporate Concrete</div>
+        <div class="domain">corporateconcrete.com</div>
+      </a>
     </div>
   </div>
 </section>
